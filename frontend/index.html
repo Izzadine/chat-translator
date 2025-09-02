@@ -2,6 +2,12 @@
 <html>
   <head>
     <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="content">
@@ -13,35 +19,37 @@
         </div>
       </div>
 
-      <div class="main-section">
-        <h2>Text to translate 👇</h2>
-        <textarea class="textarea" name="" id="text-to-translate"></textarea>
-        <h2>Select language 👇</h2>
-        <div class="checkbox">
+      <div class="main-section" id="main-section">
+        <h2 id="original-text">Text to translate 👇</h2>
+        <textarea
+          class="textarea"
+          name=""
+          id="text-to-translate"
+          placeholder="Write you text here"
+        ></textarea>
+        <h2 id="your-translation">Select language 👇</h2>
+        <div class="choice-lang" id="lang-container">
           <div class="radio-check">
-            <input type="radio" name="isSelected" id="french" />
+            <input type="radio" name="lang" id="french" value="french" />
             <label for="french">French</label>
             <img src="assets/fr-flag.png" />
           </div>
           <div class="radio-check">
-            <input type="radio" name="isSelected" id="spanish" />
+            <input type="radio" name="lang" id="spanish" value="spanish" />
             <label for="spanish">Spanish</label>
             <img src="assets/sp-flag.png" />
           </div>
           <div class="radio-check">
-            <input type="radio" name="isSelected" id="japanese" />
+            <input type="radio" name="lang" id="japanese" value="japanese" />
             <label for="japanese">Japanese</label>
             <img src="assets/jpn-flag.png" />
           </div>
         </div>
 
         <button type="button" id="translate-button">Translate</button>
-
       </div>
     </div>
     <!-- Your HTML here -->
     <script src="index.js" type="module"></script>
   </body>
 </html>
-
-

@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Poppins", sans-serif;
   /* margin-left: ; */
 }
 
@@ -71,11 +71,25 @@ div.header-text > p {
   border-width: 4px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-around;
 }
 
+div.main-section > h2{
+  text-align: center;
+
+}
+div.main-section > button{
+  /* align-items: center; */
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
 div.main-section > textarea {
+  display: block;
+  margin: 0 auto;
   width: 317px;
   height: 118px;
   top: 318px;
@@ -83,34 +97,59 @@ div.main-section > textarea {
   border-radius: 8px;
   background: #eff0f4;
   resize: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-top: 10px;
+  letter-spacing: 0%;
+  line-height: 150%;
 }
 
+.textarea{
+  display: block;
+  margin: 0 auto;
+  width: 317px;
+  height: 118px;
+  border-radius: 8px;
+  background: #eff0f4;
+  resize: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-top: 10px;
+  letter-spacing: 0%;
+  line-height: 150%;
+} 
+
+textarea::placeholder{
+  color: #333333;
+}
 h2 {
   color: #035a9d;
 }
-
-.checkbox {
+.choice-lang{
+  width: fit-content;
   display: flex;
   flex-direction: column;
-  margin-top: 2px;
-  border: 1px solid black;
-}
-
-div.radio-check > img {
-  width: 30px;
-  height: 20px;
-
-  top: 519px;
-  left: 169px;
-  border-width: 1px;
-  border: 1px solid #999999;
+  justify-content: space-around;
 }
 
 .radio-check {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin-top: 2px;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+
+div.radio-check > input,label{
+  margin-right: 10px;
+}
+div.radio-check > img {
+  width: 30px;
+  height: 20px;
+  top: 519px;
+  left: 169px;
+  border-width: 1px;
+  border: 1px solid #999999;
 }
 
 button {
@@ -122,4 +161,5 @@ button {
   background: #035a9d;
   color: whitesmoke;
   font-size: 24px;
+  cursor: pointer;
 }
