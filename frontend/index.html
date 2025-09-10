@@ -8,48 +8,90 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <div class="content">
-      <div class="main-header">
-        <img src="assets/parrot.png" alt="" />
-        <div class="header-text">
-          <h1>PollyGlot</h1>
-          <p>Perfect Translation Every Time</p>
+    <div class="app-container">
+      <!-- Sidebar avec historique -->
+      <div class="sidebar">
+        <div class="sidebar-header">
+          <h3>💬 Conversations</h3>
+          <div class="sidebar-controls">
+            <button id="btn-new" class="btn-small">
+              ➕ Nouveau
+            </button>
+            <button id="btn-export" class="btn-small">
+              📥 Export
+            </button>
+            <button id="btn-clear" class="btn-small">
+              🗑️ Effacer
+            </button>
+          </div>
+        </div>
+        <div class="history-list" id="history-list">
+          <!-- L'historique sera généré ici -->
         </div>
       </div>
-
-      <div class="main-section" id="main-section">
-        <h2 id="original-text">Text to translate 👇</h2>
-        <textarea
-          class="textarea"
-          name=""
-          id="text-to-translate"
-          placeholder="Write you text here"
-        ></textarea>
-        <h2 id="your-translation">Select language 👇</h2>
-        <div class="choice-lang" id="lang-container">
-          <div class="radio-check">
-            <input type="radio" name="lang" id="french" value="french" />
-            <label for="french">French</label>
-            <img src="assets/fr-flag.png" />
-          </div>
-          <div class="radio-check">
-            <input type="radio" name="lang" id="spanish" value="spanish" />
-            <label for="spanish">Spanish</label>
-            <img src="assets/sp-flag.png" />
-          </div>
-          <div class="radio-check">
-            <input type="radio" name="lang" id="japanese" value="japanese" />
-            <label for="japanese">Japanese</label>
-            <img src="assets/jpn-flag.png" />
+      <div class="content">
+        <div class="main-header">
+          <div class="parrot-icon">🦜</div>
+          <div class="header-text">
+            <h1>PollyGlot</h1>
+            <p>Perfect Translation Every Time</p>
           </div>
         </div>
 
-        <button type="button" id="translate-button">Translate</button>
+        <div class="conversation-area">
+          <div class="messages-container" id="messages-container">
+            <div class="empty-state" id="empty-state">
+              <div class="empty-state-icon">💭</div>
+              <h3>Commencez une nouvelle conversation</h3>
+              <p>
+                Tapez votre texte ci-dessous et sélectionnez une langue pour
+                traduire
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-area" id="">
+          <textarea
+            class="textarea"
+            name=""
+            id="text-to-translate"
+            placeholder="Write you text here..."
+          ></textarea>
+          <div class="choice-lang" id="lang-container">
+            <div class="radio-check">
+              <input type="radio" name="lang" id="french" value="french" />
+              <label for="french">French</label>
+              <div class="flag-icon">
+                <img src="assets/fr-flag.png" />
+              </div>
+            </div>
+            <div class="radio-check">
+              <input type="radio" name="lang" id="spanish" value="spanish" />
+              <label for="spanish">Spanish</label>
+              <div class="flag-icon">
+                <img src="assets/sp-flag.png" />
+              </div>
+            </div>
+            <div class="radio-check">
+              <input type="radio" name="lang" id="japanese" value="japanese" />
+              <label for="japanese">Japanese</label>
+              <div class="flag-icon">
+                <img src="assets/jpn-flag.png" />
+              </div>
+            </div>
+          </div>
+
+          <button class="btn" type="button" id="translate-button">
+            Translate
+          </button>
+        </div>
       </div>
     </div>
-    <!-- Your HTML here -->
+
     <script src="index.js" type="module"></script>
   </body>
 </html>
